@@ -7,6 +7,9 @@ class Movie {
 
     public $length = 0;
 
+    public function testFunction() {
+        return $this->title;
+    }
 }
 
 
@@ -16,6 +19,7 @@ $LOTR = new Movie();
 $LOTR->title = 'The Lord of the Rings: The Return of the King';
 $LOTR->releaseDate = '22/01/2004';
 $LOTR->length = 201;
+var_dump($LOTR->testFunction());
 
 // FILM 2
 $SW = new Movie();
@@ -23,6 +27,7 @@ $SW = new Movie();
 $SW->title = 'Star Wars: Episode VI: Return of the Jedi';
 $SW->releaseDate = '21/10/1983';
 $SW->length = 134;
+var_dump($SW->testFunction());
 
 ?>
 
