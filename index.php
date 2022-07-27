@@ -7,9 +7,12 @@ class Movie {
 
     public $length = 0;
 
-    public function __construct($name, $originalName) {
-        var_dump('Ciao sono ' . $name . '. ' . 
-                'Il mio titolo originale è: ' . $originalName);
+    public function __construct($title, $releaseDate, $length) {
+        $this->title = $title;
+        $this->releaseDate = $releaseDate;
+        $this->length = $length;
+
+        var_dump('Ciao sono ' . $title . '. ' . 'La mia durata è di: ' . $length . ' minuti');
     }
     public function testFunction() {
         return $this->title;
@@ -20,19 +23,21 @@ class Movie {
 
 
 // FILM 1
-$LOTR = new Movie('Il signore degli anelli', 'The Lord of the Rings');
+$LOTR = new Movie(
+    'The Lord of the Rings: The Return of the King', 
+    '22/01/2004', 
+    201
+);
 
-$LOTR->title = 'The Lord of the Rings: The Return of the King';
-$LOTR->releaseDate = '22/01/2004';
-$LOTR->length = 201;
 var_dump($LOTR->testFunction());
 
 // FILM 2
-$SW = new Movie('Guerre Stellari', 'Star Wars');
+$SW = new Movie(
+    'Star Wars: Episode VI: Return of the Jedi', 
+    '21/10/1983', 
+    134
+);
 
-$SW->title = 'Star Wars: Episode VI: Return of the Jedi';
-$SW->releaseDate = '21/10/1983';
-$SW->length = 134;
 var_dump($SW->testFunction());
 
 ?>
